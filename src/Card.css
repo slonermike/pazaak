@@ -1,0 +1,90 @@
+.card {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 200px;
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+
+  .card .overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/card-overlay.png");
+  }
+
+  .card .value {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 66px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .underlay {
+    display: block;
+    position: absolute;
+    width: 114px;
+    height: 100%;
+    left: 3px;
+  }
+
+  .deck-main .underlay {
+    background: linear-gradient(to right, #000000 0%,#00ff00 50%, #000000 100%);
+  }
+
+  .deck-side .underlay {
+    background: linear-gradient(to right, #000000 0%,#0000ff 50%, #000000 100%);
+  }
+
+  .deck-side.negative .underlay {
+    background: linear-gradient(to right, #000000 0%,#ff0000 50%, #000000 100%);
+  }
+
+  .deck-side.reversible .underlay {
+    background: unset;
+  }
+
+  .deck-side.reversible .underlay .top {
+    display: block;
+    position: absolute;
+    width: 114px;
+    height: 66px;
+    left: 3px;
+    background: linear-gradient(to right, #000000 0%,#0000ff 50%, #000000 100%);
+  }
+
+  .deck-side.reversible .underlay .bottom {
+    display: block;
+    position: absolute;
+    width: 114px;
+    height: 80px;
+    left: 3px;
+    top: 67px;
+    background: linear-gradient(to right, #000000 0%,#ff0000 50%, #000000 100%);
+  }
+
+  .deck-side.reversible .underlay .right {
+    display: block;
+    position: absolute;
+    width: 57px;
+    height: 45px;
+    right: 3px;
+    bottom: 0;
+    background: linear-gradient(to right,#ff0000 0%, #000000 100%);
+  }
+
+  .deck-side.reversible .underlay .left {
+    display: block;
+    position: absolute;
+    width: 57px;
+    height: 45px;
+    left: 3px;
+    bottom: 0;
+    background: linear-gradient(to right, #000000 0%,#0000ff 100%);
+  }
