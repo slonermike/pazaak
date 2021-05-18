@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Store, createStore } from 'redux';
+import { Provider } from 'react-redux';
+
 import './index.css';
 import Board from './components/Board';
 import reportWebVitals from './reportWebVitals';
+import { GameState } from './types';
+import { GameAction } from './actions';
+import { gameReducer, defaultState } from './reducers';
+
+let centralStore: Store<GameState, GameAction> = createStore<GameState, GameAction, any, any>(gameReducer as any, defaultState)
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={centralStore}>
     <Board />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
